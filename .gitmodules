@@ -1,0 +1,4 @@
+[submodule "_web/apidoc/LibZincDoxygen"]
+	path = apidoc/LibZincDoxygen
+	url = https://github.com/alan-wu/LibZincDoxygen
+
