@@ -2,4 +2,4 @@ Sphinx
 Jinja2
 sphinxcontrib-newsfeed
 pelican>3.6
--e https://github.com/ABI-Software/sphinxcontrib-cmake.git
+-e git+https://github.com/ABI-Software/sphinxcontrib-cmake.git
