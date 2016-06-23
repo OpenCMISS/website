@@ -31,7 +31,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
-    'cmake'
+    'sphinxcontrib.cmake'
 ]
 
 html_theme = "ocmiss"

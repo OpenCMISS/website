@@ -19,6 +19,7 @@ The project also depends on packages from npm, bower and pip.
 
 Building the website
 --------------------
+
 1. Install the dependencies from your system's packaging manager. For example, in Debian jessie:
 
    ```
@@ -31,7 +32,15 @@ Building the website
 
 2. Clone this repository.
 
-3. Enter the `_web` directory, install npm and bower packages and do a build:
+3. Enter the repository folder. Download OpenCMISS documentation (https://github.com/OpenCMISS/documentation) and place it into the website repository.
+
+   ```
+   git clone -b master https://github.com/OpenCMISS/documentation doc/latest/
+   ```
+
+   This is temporary and it will be automated as part of the build process.
+
+4. Install npm and bower packages and do a build:
 
    Run the following. Replace [URL] with the root of where this site will be hosted, e.g. "next.opencmiss.org". This is used for generating a sitemap for the website. 
 
@@ -56,4 +65,4 @@ Building the website
    This is because during the API documentation build, we need to fetch the Zinc library source from Physiome Project's SVN server. The SVN server uses an SSL certificate that isn't recognised. Please verify the certificate, and if it's correct, accept it Permanently to store it.
 
 
-4. The built website is now available in `_web/build/dist/`. Serve with your favourite web server.
+5. The built website is now available in `_web/build/dist/`. Serve with your favourite web server.
