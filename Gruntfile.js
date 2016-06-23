@@ -362,7 +362,7 @@ module.exports = function (grunt) {
 		exec: {
 			sphinxgen: {
 				cwd: '.tmp/sphinxenv',
-				command: '../../.pythonenv/bin/sphinx-build -c . -b html ../../../ build' //The input is the documentation root directory.
+				command: '../../.pythonenv/bin/sphinx-build -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
 			},
 			pelicangen: {
 				cwd: 'pelican',
