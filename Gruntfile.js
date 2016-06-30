@@ -21,21 +21,9 @@ module.exports = function (grunt) {
 		app: 'app',
 		dist: 'build/dist'
 	};
-
 	// Define the configuration for all the tasks
+
     grunt.initConfig({
-		jinja2: {
-			app: {
-				options: {context_path: "context",template_path:"app"},
-				files:[{
-					expand: true,
-					cwd: 'app/pages',
-					src: ['**/*.html'],
-					dest: '.tmp',
-					ext: '.html'
-				}]
-			}
-		},
 
 		// Project settings
 		config: config,
@@ -66,7 +54,7 @@ module.exports = function (grunt) {
 			},
 			jinja: {
 				files: ['<%= config.app %>/pages/**/*.html','<%= config.app %>/partials/**/*.jinja','context/{,*/}*.json'],
-				tasks: ['jinja2:app','sphinxgenDebug','exec:pelicangen']
+				tasks: ['sphinxgenDebug','exec:pelicangen']
 			},
 			sphinxgen: {
 				files: ['sphinx/**/*.html','sphinx/**/*.py','sphinx/**/*.conf','../**/*.rst','!../_web/**/*.*'],
@@ -489,12 +477,10 @@ module.exports = function (grunt) {
 			server: [
 				'sass:server',
 				'copy:styles',
-				'jinja2:app'
 			],
 			dist: [
 				'sass',
 				'copy:styles',
-				'jinja2:app',
 				'imagemin',
 				'svgmin'
 			]
