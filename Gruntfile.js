@@ -54,15 +54,15 @@ module.exports = function (grunt) {
 			},
 			jinja: {
 				files: ['<%= config.app %>/pages/**/*.html','<%= config.app %>/partials/**/*.jinja','context/{,*/}*.json'],
-				tasks: ['sphinxgenDebug','exec:pelicangen']
+				tasks: ['sphinx:debug','pelican:debug']
 			},
 			sphinxgen: {
 				files: ['sphinx/**/*.html','sphinx/**/*.py','sphinx/**/*.conf','../**/*.rst','!../_web/**/*.*'],
-				tasks: ['sphinxgenDebug']
+				tasks: ['sphinx:debug']
 			},
 			pelican: {
 				files: ['pelican/**/*.rst','pelican/**/*.html','pelican/**/*.py','content/**/*.*'],
-				tasks: ['exec:pelicangen']
+				tasks: ['pelican:debug']
 			},
 			styles: {
 				files: ['<%= config.app %>/styles/{,*/}*.css'],
@@ -348,13 +348,21 @@ module.exports = function (grunt) {
 			}
 		},
 		exec: {
-			sphinxgen: {
+			sphinxStaging: {
 				cwd: '.tmp/sphinxenv',
-				command: '../../.pythonenv/bin/sphinx-build -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
+				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=staging -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
 			},
-			pelicangen: {
+			sphinxRelease: {
+				cwd: '.tmp/sphinxenv',
+				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=release -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
+			},
+			pelicanStaging: {
 				cwd: 'pelican',
 				command: '../.pythonenv/bin/pelican --debug -o ../.tmp/pelicangen -s pelicanconf.py'
+			},
+			pelicanRelease: {
+				cwd: 'pelican',
+				command: '../.pythonenv/bin/pelican --debug -o ../.tmp/pelicangen -s publishconf.py'
 			}
 		},
 
@@ -510,8 +518,8 @@ module.exports = function (grunt) {
 			'merge-json:downloads',
 			'concurrent:server',
 			'autoprefixer',
-			'sphinxgenDebug',
-			'exec:pelicangen',
+			'sphinx:debug',
+			'pelican:debug',
 			'babel:dev',
 			'copy:extgenDev',
 			'connect:livereload',
@@ -524,23 +532,31 @@ module.exports = function (grunt) {
 		grunt.task.run([target ? ('serve:' + target) : 'serve']);
 	});
 
-	// Generalise into a sphinxgen task.
-	grunt.registerTask('sphinxgenDist',[
-		'copy:sphinxPrep',
-		'exec:sphinxgen',
-		'copy:sphinxOutputToDist'
-	]);
+	grunt.registerTask('sphinx', function(target){
+		var env = grunt.option('site-env') || "staging";
+		if (env === "staging"){
+			grunt.task.run(['copy:sphinxPrep','exec:sphinxStaging']);
+		} else if (env === "release"){
+			grunt.task.run(['copy:sphinxPrep','exec:sphinxRelease']);
+		}
+		if (target === "debug"){
+			grunt.task.run('copy:sphinxOutputToDebug');
+		} else if (target === "dist") {
+			grunt.task.run('copy:sphinxOutputToDist');
+		}
+	});
 
-	grunt.registerTask('pelicanDist',[
-		'exec:pelicangen',
-		'copy:pelicanOutputToDist'
-	]);
-
-	grunt.registerTask('sphinxgenDebug',[
-		'copy:sphinxPrep',
-		'exec:sphinxgen',
-		'copy:sphinxOutputToDebug'
-	]);
+	grunt.registerTask('pelican', function(target){
+		var env = grunt.option('site-env') || "staging";
+		if (env === "staging"){
+			grunt.task.run('exec:pelicanStaging');
+		} else if (env === "release"){
+			grunt.task.run('exec:pelicanRelease');
+		}
+		if (target === "dist"){
+			grunt.task.run('copy:pelicanOutputToDist');
+		}
+	});
 
 
 
@@ -555,8 +571,8 @@ module.exports = function (grunt) {
 		'cssmin',
 		'uglify',
 		'copy:dist',
-		'sphinxgenDist',
-		'pelicanDist',
+		'sphinx:dist',
+		'pelican:dist',
 		'rev',
 		'usemin',
 		'relativeRoot:dist',

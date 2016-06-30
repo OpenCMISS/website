@@ -76,3 +76,5 @@ NAV_HEADINGS_FOR_CATEGORY = {
 	"News": "community",
 	"Minutes":"community"
 }
+
+SITEENV = "staging"
