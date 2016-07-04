@@ -119,10 +119,10 @@
 			return $.ajax('/data/downloads.json').then(function(downloadsData){
 				return $.ajax('/data/development_versions.json').then(function(devBinaries){
 					var data = $.extend(downloadsData, devBinaries);
-					console.log(data);
 					return data;
 				}, function(error){
-					console.error("Error occurred while getting development binaries. ",error);
+					console.error("Error occurred while getting development binaries, using release data only. ",error);
+					return downloadsData;
 				});
 			},function(error){
 				console.error("Error occurred while getting downloads data. ",error);
