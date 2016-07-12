@@ -1,17 +1,55 @@
 "use strict";
 (function(){
-    var Util = { filterKey: function(array,key,val) {
-		return array.filter(function(element){
-			return element[key] === val;
-		});
-    },
-				 partition: function(items, size) {
-					 var result = _.groupBy(items, function(item, i) {
-						 return Math.floor(i/size);
-					 });
-					 return _.values(result);
-				 }
-			   };
+    var Util = {
+		filterKey: function(array,key,val) {
+			return array.filter(function(element){
+				return element[key] === val;
+			});
+		},
+		partition: function(items, size) {
+			var result = _.groupBy(items, function(item, i) {
+				return Math.floor(i/size);
+			});
+			return _.values(result);
+		}
+	};
+
+	var TrackingUtil = window.TrackingUtil = {
+		trackDownload: function(name,version,platform,format,hitCallback){
+			// Sends an event to Google Analytics to track download.
+			// All fields are compulsory, except callback.
+			if (name === undefined || name === null  || platform === undefined || platform === null || version === null || version === undefined || format === undefined || format === null){
+				return;
+			}
+			if (!hitCallback){
+				hitCallback = function(){};
+			}
+			if (typeof analytics === 'undefined') {
+				return;
+			}
+			analytics('send','event', {
+				eventCategory: name,
+				eventAction: version,
+				eventLabel: platform + ' || Format: ' + format,
+				hitCallback: hitCallback
+			});
+		},
+		trackHashedPageview: function(hitCallback){
+			var path = window.location.pathname,
+				hash = window.location.hash;
+			if (hash === "#/"){
+				hash = '';
+			} // Remove the hash part to group this page view with normal ones.
+			var fullPath = path + hash;
+			if (typeof analytics === 'undefined') {
+				return;
+			}
+			analytics('send','pageview',fullPath, {
+				hitCallback: hitCallback
+				}
+			});
+		}
+	};
 
 
 	var PackageBox = React.createClass({
@@ -32,7 +70,7 @@
 					<div className="description">
 					<h3>{this.props.pkg.name}</h3>
 					<p>{this.props.pkg.description}</p>
-				<a href={"#/package/"+this.props.pkg.id} className={"btn btn-default " + (isMain ? "main" : "")}>Get {this.props.pkg.name}</a>
+					<a href={"#/package/"+this.props.pkg.id} className={"btn btn-default " + (isMain ? "main" : "")}>Get {this.props.pkg.name}</a>
 					</div>
 					</div>
 					</div>);
@@ -119,10 +157,10 @@
 			return $.ajax('/data/downloads.json').then(function(downloadsData){
 				return $.ajax('/data/development_versions.json').then(function(devBinaries){
 					var data = $.extend(downloadsData, devBinaries);
-					console.log(data);
 					return data;
 				}, function(error){
-					console.error("Error occurred while getting development binaries. ",error);
+					console.error("Error occurred while getting development binaries, using release data only. ",error);
+					return downloadsData;
 				});
 			},function(error){
 				console.error("Error occurred while getting downloads data. ",error);
