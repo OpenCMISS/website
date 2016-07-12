@@ -4,6 +4,7 @@
 	   <DownloadBox> - represents a download with different formats. For example, one version of the software available either an executable or a compressed archive.
 	   @name  - Name of the download.
 	   @downloads - The different download formats, expressed as an array of Objects. The Objects should have two properties - description and url.
+	   @onDownloadClicked - Callback function, called when a user clisk on one of the options in the DownloadBox.
 
 	*/
 	window.DownloadBox = React.createClass({
@@ -17,6 +18,13 @@
 			return (<span className={"glyphicon "+glyphiconClass} aria-hidden="true"></span>);
 		},
 
+		_onDownloadClicked: function(download){
+			if (!this.props.onDownloadClicked){
+				return;
+			}
+			this.props.onDownloadClicked(download);
+		},
+
 		render: function(){
 			var title, self = this;
 			if (this.props.name !== undefined && this.props.name !== null ){
@@ -27,7 +35,7 @@
 					{title}
 				{this.props.downloads.map(function(download,idx){
 					var willHighlight = idx == 0 && self.props.highlightMain; // Checks if the main (first) button should have different styling than others
-					return (<a href={download.url} target="_blank" className={"btn btn-default" + (willHighlight ? " main": "")}>{self.renderTypeIcon(download.type)}{download.description}</a>);
+					return (<a href={download.url} target="_blank" onClick={function(){self._onDownloadClicked(download)}} className={"btn btn-default" + (willHighlight ? " main": "")}>{self.renderTypeIcon(download.type)}{download.description}</a>);
 				})}
 				</div>
 			)
@@ -129,16 +137,17 @@
 			routes: React.PropTypes.object.isRequired
 		},
 
-		getStableDownload: function(){
-			var pkg = this.props.pkg;
-			var currentPlatform = this.context.currentPlatform;
+		renderStableDownload: function(){
+			var pkg = this.props.pkg,
+				self = this,
+				currentPlatform = this.context.currentPlatform;
 			if (!pkg || !pkg.releases || !currentPlatform){	return null; }
 			releaseVer = pkg.releases[currentPlatform.value];
 			var name = this.nameForRelease(releaseVer.name, currentPlatform);
-			return <DownloadBox name={name} downloads={releaseVer.formats} />
+			return <DownloadBox name={name} downloads={releaseVer.formats} onDownloadClicked={function(download){TrackingUtil.trackDownload(pkg.id,releaseVer.name,currentPlatform.value,download.description)}} />
 		},
 
-		getInstallInstructions: function(){
+		renderInstallInstructions: function(){
 			var pkg = this.props.pkg;
 			if (!pkg) return null;
 			var pkgId = pkg.id;
@@ -166,16 +175,13 @@
 			if (!pkg) return this.renderNoRelease();
 			var release = pkg.releases;
 			if (!release) return this.renderNoRelease();
-			var currentPlatform = this.context.currentPlatform,
-				stableDownload = this.getStableDownload(),
-				installInstructions = this.getInstallInstructions(),
-				mainDownload = stableDownload;
+			var currentPlatform = this.context.currentPlatform;
 
 			return (<div className="tab-pane" role="tabpanel">
 					<PlatformPicker currentPlatform={currentPlatform} platforms={this.context.platforms} onPlatformChange={this.context.platformChangeHandler} />
-					{stableDownload}
+					{this.renderStableDownload()}
 					<Alert><em>Want to use {pkg.name} on HPC platforms or set up a development environment?</em> Go to the <a role="button" onClick={this.goToSourceBox}>Source Code tab</a> for options to install or set up from source.</Alert>
-					{installInstructions}
+					{this.renderInstallInstructions()}
 					</div>
 				   );
 		}
@@ -211,14 +217,18 @@
 		},
 
 		render: function(){
-			var Alert = ReactBootstrap.Alert,
+			var self = this,
+				Alert = ReactBootstrap.Alert,
 				currentPlatform = this.context.currentPlatform,
 				pkg = this.props.pkg;
 			if (!pkg ) return this.renderNoDevVersions();
 			var packageDevVersions = this.getPackageDevData();
 			var devComponent = window.pkgmeta.DEV_VERSIONS_MAP[pkg.id];
+			var trackDownloadFn = function(version,format){
+				TrackingUtil.trackDownload(pkg.id,version,self.context.currentPlatform.value,format);
+			};
 			if (!devComponent || !packageDevVersions) { return this.renderNoDevVersions();}
-			var devVersionsElement = React.createElement(devComponent,{versions: packageDevVersions});
+			var devVersionsElement = React.createElement(devComponent,{versions: packageDevVersions,onDownloadClicked:trackDownloadFn});
 			return (<div role="tabpanel" className="tab-pane">
 					<h3>Development Versions</h3>
 					<Alert bsStyle="warning"><strong>Here be dragons!</strong> These development versions of {pkg.name} are automatically built from source nightly. They include newer features but may be unstable or may not run. It may be necessary to try multiple versions to get a working version.
