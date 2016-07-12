@@ -46,7 +46,6 @@
 			}
 			analytics('send','pageview',fullPath, {
 				hitCallback: hitCallback
-				}
 			});
 		}
 	};
