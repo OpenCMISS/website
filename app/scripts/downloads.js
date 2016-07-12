@@ -31,11 +31,23 @@
 				eventCategory: name,
 				eventAction: version,
 				eventLabel: platform + ' || Format: ' + format,
-				hitCallback: hitCallback;
+				hitCallback: hitCallback
 			});
 		},
-		trackPageview: function(){
-
+		trackHashedPageview: function(hitCallback){
+			var path = window.location.pathname,
+				hash = window.location.hash;
+			if (hash === "#/"){
+				hash = '';
+			} // Remove the hash part to group this page view with normal ones.
+			var fullPath = path + hash;
+			if (typeof analytics === 'undefined') {
+				return;
+			}
+			analytics('send','pageview',fullPath, {
+				hitCallback: hitCallback
+				}
+			});
 		}
 	};
 
@@ -58,7 +70,7 @@
 					<div className="description">
 					<h3>{this.props.pkg.name}</h3>
 					<p>{this.props.pkg.description}</p>
-				<a href={"#/package/"+this.props.pkg.id} className={"btn btn-default " + (isMain ? "main" : "")}>Get {this.props.pkg.name}</a>
+					<a href={"#/package/"+this.props.pkg.id} className={"btn btn-default " + (isMain ? "main" : "")}>Get {this.props.pkg.name}</a>
 					</div>
 					</div>
 					</div>);
