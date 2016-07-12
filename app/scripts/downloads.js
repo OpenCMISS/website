@@ -1,17 +1,43 @@
 "use strict";
 (function(){
-    var Util = { filterKey: function(array,key,val) {
-		return array.filter(function(element){
-			return element[key] === val;
-		});
-    },
-				 partition: function(items, size) {
-					 var result = _.groupBy(items, function(item, i) {
-						 return Math.floor(i/size);
-					 });
-					 return _.values(result);
-				 }
-			   };
+    var Util = {
+		filterKey: function(array,key,val) {
+			return array.filter(function(element){
+				return element[key] === val;
+			});
+		},
+		partition: function(items, size) {
+			var result = _.groupBy(items, function(item, i) {
+				return Math.floor(i/size);
+			});
+			return _.values(result);
+		}
+	};
+
+	var TrackingUtil = window.TrackingUtil = {
+		trackDownload: function(name,version,platform,format,hitCallback){
+			// Sends an event to Google Analytics to track download.
+			// All fields are compulsory, except callback.
+			if (name === undefined || name === null  || platform === undefined || platform === null || version === null || version === undefined || format === undefined || format === null){
+				return;
+			}
+			if (!hitCallback){
+				hitCallback = function(){};
+			}
+			if (typeof analytics === 'undefined') {
+				return;
+			}
+			analytics('send','event', {
+				eventCategory: name,
+				eventAction: version,
+				eventLabel: platform + ' || Format: ' + format,
+				hitCallback: hitCallback;
+			});
+		},
+		trackPageview: function(){
+
+		}
+	};
 
 
 	var PackageBox = React.createClass({
