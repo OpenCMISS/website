@@ -69,14 +69,18 @@
 			return versionList;
 		},
 
-		render: function(){
 
+
+		render: function(){
+			var self = this;
 			var downloads = this.buildDownloadList();
 			// Show only the latest 5 downloads.
 			return (
 					<div className="versions-list">
 					{downloads.slice(0,5).map(function(version){
-						return (<div><p className="format-list"><DownloadBox name={version.name} downloads={version.downloads} highlightMain={false} /></p></div>)
+						return (<div><p className="format-list"><DownloadBox name={version.name} downloads={version.downloads} highlightMain={false} onDownloadClicked={function(download){
+							self.props.onDownloadClicked(version.name,download.description);
+						}} /></p></div>)
 					})}
 				</div>);
 
@@ -141,12 +145,14 @@
 		},
 
 		render: function(){
-
+			var self = this;
 			var downloads = this.buildDownloadList();
 			return (
 					<div className="versions-list">
 					{downloads.slice(0,5).map(function(version){
-						return (<div><p className="format-list"><DownloadBox name={version.name} downloads={version.downloads} highlightMain={false} /></p></div>)
+						return (<div><p className="format-list"><DownloadBox name={version.name} downloads={version.downloads} highlightMain={false}  onDownloadClicked={function(download){
+							self.props.onDownloadClicked(version.name,download.description);
+						}} /></p></div>)
 					})}
 				</div>);
 

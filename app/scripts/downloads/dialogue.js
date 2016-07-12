@@ -217,14 +217,18 @@
 		},
 
 		render: function(){
-			var Alert = ReactBootstrap.Alert,
+			var self = this,
+				Alert = ReactBootstrap.Alert,
 				currentPlatform = this.context.currentPlatform,
 				pkg = this.props.pkg;
 			if (!pkg ) return this.renderNoDevVersions();
 			var packageDevVersions = this.getPackageDevData();
 			var devComponent = window.pkgmeta.DEV_VERSIONS_MAP[pkg.id];
+			var trackDownloadFn = function(version,format){
+				TrackingUtil.trackDownload(pkg.id,version,self.context.currentPlatform.value,format);
+			};
 			if (!devComponent || !packageDevVersions) { return this.renderNoDevVersions();}
-			var devVersionsElement = React.createElement(devComponent,{versions: packageDevVersions});
+			var devVersionsElement = React.createElement(devComponent,{versions: packageDevVersions,onDownloadClicked:trackDownloadFn});
 			return (<div role="tabpanel" className="tab-pane">
 					<h3>Development Versions</h3>
 					<Alert bsStyle="warning"><strong>Here be dragons!</strong> These development versions of {pkg.name} are automatically built from source nightly. They include newer features but may be unstable or may not run. It may be necessary to try multiple versions to get a working version.
