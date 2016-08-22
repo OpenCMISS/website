@@ -5,7 +5,7 @@ SITE_ENV ?= staging
 
 prod : summary clean deps apidoc
 ifndef SITE_URL
-	@echo "Error: Site URL not set. Production builds will not work without site url being set to generate a sitemap. Set with SITE_URL=[url]"
+	echo "Error: Site URL not set. Production builds will not work without site url being set to generate a sitemap. Set with SITE_URL=[url]"
 	exit 1
 endif
 	grunt --siteurl=$(SITE_URL) --site-env=$(SITE_ENV)
