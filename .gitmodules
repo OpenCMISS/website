@@ -1,4 +1,7 @@
-[submodule "_web/apidoc/LibZincDoxygen"]
+[submodule "apidoc/zinc"]
+	path = apidoc/zinc
+	url = https://github.com/OpenCMISS/zinc
+	branch = devel
+[submodule "apidoc/LibZincDoxygen"]
 	path = apidoc/LibZincDoxygen
-	url = https://github.com/alan-wu/LibZincDoxygen
-
+	url = https://github.com/OpenCMISS-Dependencies/LibZincDoxygen

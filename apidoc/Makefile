@@ -1,4 +1,4 @@
-html: init clean sync
+html: clean
 	cp -r zinc .working
 	cp LibZincDoxygen/api_2_api++_doc.py .working
 	cp -r LibZincDoxygen/libzinc_doxgen_script .working
@@ -7,12 +7,6 @@ html: init clean sync
 	mkdir -p build/apidoc/zinc/latest/
 	cp -r .working/libzinc_doxgen_script/libzinc_dox_output/html/* build/apidoc/zinc/latest
 
-sync:
-	svn up zinc --accept theirs-full # If any conflict arises, take the source repository.
-
 clean:
 	rm -rf .working
 	rm -rf build
-
-init:
-	svn co https://svn.physiomeproject.org/svn/cmiss/zinc/library/trunk/ zinc

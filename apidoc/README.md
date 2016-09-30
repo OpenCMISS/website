@@ -5,11 +5,7 @@ NOTE - The first time the script is run, SVN may warn you about an unknown CA ce
 
 Use this script to generate Zinc C++ header with comments and doxygen page.
 
-Currently it issues an svn command to checkout Zinc from https://svn.physiomeproject.org/svn/cmiss/zinc/library/.
-
-Requirement
------------
-* SVN (Required for tracking the Zinc library SVN repository.)
+Currently it tracks OpenCMISS-Zinc (https://github.com/OpenCMISS/zinc) through a git submodule.
 
 Build It
 --------
