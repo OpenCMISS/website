@@ -1,6 +1,3 @@
 .working
 build
 .svn
- # Ignored since this is tracking the zinc svn repository
-
-zinc
