@@ -7,3 +7,4 @@ bower_components
 extgen/apidoc
 .pythonenv
 **/*.pyc
+.DS_Store
