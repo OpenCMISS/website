@@ -19,11 +19,11 @@ Here is a list of pages that are complete enough. Please take a look and give me
 * CMISS Example Model: `Per Pixel Lighting </examples/a/per_pixel_lighting/index.html>`_, `Eye Model </examples/a/eye/index.html>`_ , `Animate Jaw </examples/a/animate_jaw/index.html>`_.
   Note that this page has some Responsive features implemented. That is, sidebar is hidden and the content shrinks and grows in size depending on screen size.
   **Updated August** `Animate Jaw </examples/a/animate_jaw/index.html>`_ has an interactive 3D model.
-* `Documentation </doc.html>`_ - **Updated 16 September** some pages have now been converted to the new template.
+* `Documentation </documentation.html>`_ - **Updated 16 September** some pages have now been converted to the new template.
 * `Getting Started index </getting-started.html>`_ - A page linked from on the front page.
 * `Community </community.html>`_
 * `About page </about.html>`_
-* `API documentation </doc.html#technical>`_ **Added on 16 September** - a copy of latest Zinc and Iron API documentation.
+* `API documentation </documentation.html#technical>`_ **Added on 16 September** - a copy of latest Zinc and Iron API documentation.
 * `Developers page </developers.html>`_ **Added on 16 September** Currently just a list of links. Please send in suggestions on how you think they could be categorised.
 * `News </news/index.html>`_ - **Updated 24 September** A list of news items, paginated.
 * Add section on pages with pending work in status page. **Updated 29 September** Done.
