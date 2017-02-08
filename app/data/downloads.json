@@ -15,11 +15,11 @@
 				"formats": [
 					{
 						"description":"Building instructions",
-						"url":"/documentation/cmake/docs"
+						"url":"/documentation/building"
 					},
 					{
 						"description":"Browse source code",
-						"url":"https://github.com/OpenCMISS/manage",
+						"url":"https://github.com/OpenCMISS",
 						"type":"link"
 					}
 				]
