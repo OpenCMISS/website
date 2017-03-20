@@ -32,10 +32,6 @@ Building the website
 
 2. Clone this repository.
 
-   ```
-   git clone https://github.com/OpenCMISS/website
-   ```
-
 3. Enter the repository folder. Download OpenCMISS documentation (https://github.com/OpenCMISS/documentation) and place it into the website repository.
 
    ```
@@ -49,7 +45,8 @@ Building the website
    Run the following. Replace [URL] with the root of where this site will be hosted, e.g. "next.opencmiss.org". This is used for generating a sitemap for the website. 
 
    ```
-   SITE_URL=[URL] make
+   cd _web
+   export SITE_URL=[URL];make
    ```
    NOTE - The first time the script is run, you may run into this prompt:
    
@@ -68,4 +65,4 @@ Building the website
    This is because during the API documentation build, we need to fetch the Zinc library source from Physiome Project's SVN server. The SVN server uses an SSL certificate that isn't recognised. Please verify the certificate, and if it's correct, accept it Permanently to store it.
 
 
-5. The built website is now available in `build/dist/`. Serve with your favourite web server.
+5. The built website is now available in `_web/build/dist/`. Serve with your favourite web server.

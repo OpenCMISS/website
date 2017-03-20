@@ -15,7 +15,7 @@ debug: summary clean deps apidoc
 
 summary:
 ifeq ($(APIDOC),no)
-	@echo "API Documentation: disabled (API docs will not be included in the build. Only use this if you are generating the site for testing purposes.)"
+	echo "API Documentation: disabled (API docs will not be included in the build. Only use this if you are generating the site for testing purposes.)"
 endif
 
 apidoc:
