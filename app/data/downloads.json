@@ -9,7 +9,7 @@
 			"id":"opencmisslibs",
 			"name":"OpenCMISS Libarires",
 			"icon":"assets/downloads/opencmiss.png",
-			"description": "Complete collection of applications, libraries and examples to get you started building and visualising models.",
+			"description": "OpenCMISS libraries SDK to get you started building and visualising models.",
 			"releases": {
 				"windows":{
 					"name":"1.3.0",
