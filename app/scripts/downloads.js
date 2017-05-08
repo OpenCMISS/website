@@ -265,10 +265,11 @@
 						<h1>Get OpenCMISS</h1>
 						<p>Choose the right package for your use.</p>
 						<FeaturedPackageBox pkg={this.getFeaturedPackage()} />
-						//<h2>Other Downloads</h2>
-						//<PackageGrid packages={this.getOrdinaryPackages()} />
-						//<PackageDetailsDialogue pkg={this.state.currentPackage} cancel={this._onDialogueExit} currentTab={this.state.currentTab}/>
-
+<!-
+                        <h2>Other Downloads</h2>
+						<PackageGrid packages={this.getOrdinaryPackages()} />
+						<PackageDetailsDialogue pkg={this.state.currentPackage} cancel={this._onDialogueExit} currentTab={this.state.currentTab}/>
+->
 						</div>
 				);
 			}
