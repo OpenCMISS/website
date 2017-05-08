@@ -153,8 +153,8 @@
 
 		_loadInitialState: function(){
 			var self = this;
-			return $.ajax('/data/downloads.json').then(function(downloadsData){
-				return $.ajax('/data/development_versions.json').then(function(devBinaries){
+			return $.ajax('data/downloads.json').then(function(downloadsData){
+				return $.ajax('data/development_versions.json').then(function(devBinaries){
 					var data = $.extend(downloadsData, devBinaries);
 					return data;
 				}, function(error){
