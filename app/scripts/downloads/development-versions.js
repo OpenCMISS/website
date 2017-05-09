@@ -71,6 +71,7 @@
 		render: function(){
 			var self = this;
 			var downloads = this.buildDownloadList();
+			console.log(downloads);
 			// Show only the latest 5 downloads.
 			return (
 					<div className="versions-list">
