@@ -127,7 +127,7 @@
 
 	var DownloadTab = React.createClass({
 		nameForRelease: function(versionName,platform){
-			return versionName + ", for " + platform.label;
+			return "Version: " + versionName + ", for " + platform.label;
 		},
 
 		contextTypes: {
