@@ -33,8 +33,8 @@
 	//FIXME Extract parsing into a function, and add the rest as a mixin
 
 	window.devversions.OpenCMISSLibrariesDevVersionsList = React.createClass({
-		_getNameForFormat: function(architecture){
-			return "for " + architecture;
+		_getNameForFormat: function(format, architecture){
+			return format + "for " + architecture;
 		},
 
 		_parseVersionTree: function(versionTree){
@@ -43,7 +43,7 @@
 				for (var archName in versionTree[formatName]){
 					for (var versionNumber in versionTree[formatName][archName]) {
 						var version = versionTree[formatName][archName][versionNumber];
-						var description = this._getNameForFormat(archName);
+						var description = this._getNameForFormat(formatName, archName);
 						if (versionMap[versionNumber] === undefined){
 							versionMap[versionNumber] = [];
 						}
@@ -61,7 +61,7 @@
 			var versionList = [];
 			for (var versionName in versionHash){
 				var version = versionHash[versionName],
-					versionLabel = versionName;
+					versionLabel = 'Version: ' + versionName;
 				versionList.push({name:versionLabel,downloads:version});
 			}
 			versionList.sort(compareVersionString);
