@@ -34,7 +34,7 @@
 
 	window.devversions.OpenCMISSLibrariesDevVersionsList = React.createClass({
 		_getNameForFormat: function(format, architecture){
-			return format + "for " + architecture;
+			return format + " (" + architecture + ")";
 		},
 
 		_parseVersionTree: function(versionTree){
