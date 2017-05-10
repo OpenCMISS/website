@@ -11,7 +11,7 @@
 	function parseVersionString(versionString){
 		var parsedVersion = {};
 		var versionComps = versionString.split('.');
-		if (parts.length  != 4) {
+		if (versionComps.length  != 4) {
 			console.log("Bad version string");
 		}
 
