@@ -25,23 +25,27 @@
 					"formats": [{
 						"description": "SDK Installer 64-bit",
 						"url": "ftp://ftp.bioeng.auckland.ac.nz/cmiss/opencmisslibs_sdk/release/OpenCMISS-Libraries_1.3.0_SDK_Windows.exe"
+					},
+					{
+						"description": "SDK Zip 64-bit",
+						"url": "ftp://ftp.bioeng.auckland.ac.nz/cmiss/opencmisslibs_sdk/release/OpenCMISS-Libraries_1.3.0_SDK_Windows.zip"
 					}]
 				},
 				"mac": {
 					"name": "1.3.0",
 					"formats": [{
-						"description": "TAR.GZ 64-bit",
+						"description": "SDK TAR.GZ 64-bit",
 						"url": "ftp://ftp.bioeng.auckland.ac.nz/cmiss/opencmisslibs_sdk/release/OpenCMISS-Libraries_1.3.0_SDK_Darwin.tar.gz"
 					}]
 				},
 				"linux": {
 					"name": "1.3.0",
 					"formats": [{
-							"description": "Ubuntu 16.04 TAR.GZ 64-bit",
+							"description": "Ubuntu 16.04 SDK TAR.GZ 64-bit",
 							"url": "ftp://ftp.bioeng.auckland.ac.nz/cmiss/opencmisslibs_sdk/release/OpenCMISS-Libraries_1.3.0_SDK_Ubuntu-16.04.tar.gz"
 						},
 						{
-							"description": "Ubuntu 14.04 TAR.GZ 64-bit",
+							"description": "Ubuntu 14.04 SDK TAR.GZ 64-bit",
 							"url": "ftp://ftp.bioeng.auckland.ac.nz/cmiss/opencmisslibs_sdk/release/OpenCMISS-Libraries_1.3.0_SDK_Ubuntu-14.04.tar.gz"
 						}
 					]
