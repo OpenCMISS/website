@@ -13,6 +13,7 @@
 		var versionComps = versionString.split('.');
 		if (versionComps.length  != 4) {
 			console.log("Bad version string");
+			return null;
 		}
 
 		parsedVersion.major = versionComps[0];
