@@ -128,7 +128,7 @@
 		// Director router
 		router: null,
 	getPlatformForValue: function(platforms,value){
-	    return _.first(Util.filterKey(platforms,"value",value));
+		return _.first(Util.filterKey(platforms,"value",value));
 
 	},
 	_detectPlatform: function(){
@@ -153,8 +153,8 @@
 
 		_loadInitialState: function(){
 			var self = this;
-			return $.ajax('/data/downloads.json').then(function(downloadsData){
-				return $.ajax('/data/development_versions.json').then(function(devBinaries){
+			return $.ajax('data/downloads.json').then(function(downloadsData){
+				return $.ajax('data/develop_versions.json').then(function(devBinaries){
 					var data = $.extend(downloadsData, devBinaries);
 					return data;
 				}, function(error){
@@ -265,12 +265,11 @@
 						<h1>Get OpenCMISS</h1>
 						<p>Choose the right package for your use.</p>
 						<FeaturedPackageBox pkg={this.getFeaturedPackage()} />
-						<h2>Other Downloads</h2>
-						<PackageGrid packages={this.getOrdinaryPackages()} />
 						<PackageDetailsDialogue pkg={this.state.currentPackage} cancel={this._onDialogueExit} currentTab={this.state.currentTab}/>
-
 						</div>
 				);
+				//<h2>Other Downloads</h2>
+				//<PackageGrid packages={this.getOrdinaryPackages()} />
 			}
 		}
     });
