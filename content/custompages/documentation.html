@@ -15,53 +15,80 @@
 {% endblock %}
 {% block content %}
 <h1>Documentation</h1>
-<p>Documentation on using OpenCMISS software packages for modelling and visualisation.</p>
+<p>Documentation on using OpenCMISS software packages for modelling and visualisation.  For a broad introduction on the themes and capabilities of the OpenCMISS libraries read <a href="/about.html">this page</a>.</p>
 
-<section class="row doc-links" id="introduction">
-	<h2>Introduction</h2>
+<section class="row doc-links" id="getting_startd">
+	<h2>Getting Started</h2>
 	<div class="row-padded">
 		<div class="col-sm-6 media-item">
-			<a href="/about.html">
+			<a href="/downloads.html">
 				<div class="description">
-					<p class="name">Introductory overview</p>
-					<p>Covers the broad themes and capabilities of the OpenCMISS libraries.</p>
+					<p class="name">Downloading the OpenCMISS libraries SDK</p>
+					<p>Links for downloading OpenCMISS libraries software.</p>
 				</div>
 			</a>
 		</div>
-
 		<div class="col-sm-6 media-item">
-			<a href="/getting-started.html">
+			<a href="/documentation/install">
 				<div class="description">
-					<p class="name">Getting Started</p>
-					<p>Instructions on installing and building the OpenCMISS libraries from source.</p>
+					<p class="name">Installing requirements and OpenCMISS libraries SDK</p>
+					<p>Instructions on how to install OpenCMISS libraries requirements and SDK.</p>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 media-item">
+			<a href="/documentation/usersdk">
+				<div class="description">
+					<p class="name">Using the OpenCMISS libraries SDK</p>
+					<p>Instructions on how to use OpenCMISS libraries from SDK.</p>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 media-item">
+			<a href="/documentation/building">
+				<div class="description">
+					<p class="name">Building the OpenCMISS libraries</p>
+					<p>Instructions on how to build OpenCMISS libraries from source.</p>
+				</div>
+			</a>
+		</div>
+	</div>
+	<h3>User Guides</h3>
+	<div class="row-padded">
+		<div class="media-item col-sm-6">
+			<a href="/documentation/zinc/index.html">
+				<div class="description"><p class="name">Zinc Library Documentation</p>
+					<p>Documentation on using the OpenCMISS-Zinc Library.</p>
 				</div>
 			</a>
 		</div>
 	</div>
 </section>
 <section class="row doc-links" id="tutorials">
-	<h2>Tutorials <a href="/documentation/tutorials/index.html" class="see-more">See all tutorials</a></h2>
-<div class="row-padded">
-	<div class="media-item col-sm-6">
-		<a href="/documentation/tutorials/zinc_evaluate_field/">
-			<div class="description">
-				<p class="name">Load A Model And Evaluate A Field</p>
-				<p>This example opens a model and evaluates and prints values of a field in each element of it.</p>
-			</div>
-		</a>
+	<!-- ><h2>Tutorials <a href="/documentation/tutorials/index.html" class="see-more">See all tutorials</a></h2> -->
+	<h2>Tutorials</h2>
+	<p>In depth walkthrough tutorials covering basic themes, with detailed documentation.
+	<div class="row-padded">
+		<div class="media-item col-sm-6">
+			<a href="/documentation/tutorials/zinc_evaluate_field/">
+				<div class="description">
+					<p class="name">Load A Model And Evaluate A Field</p>
+					<p>This example opens a model and evaluates and prints values of a field in each element of it.</p>
+				</div>
+			</a>
+		</div>
+		<div class="media-item col-sm-6">
+			<a href="/documentation/tutorials/zinc_view_graphics/">
+				<div class="description"><p class="name">Create and View Graphics</p>
+					<p>This example shows how to create basic graphics to visualise models, and how to view them interactively in a window.</p></div>
+			</a>
+		</div>
 	</div>
-	<div class="media-item col-sm-6">
-		<a href="/documentation/tutorials/zinc_view_graphics/">
-			<div class="description"><p class="name">Create and View Graphics</p>
-				<p>This example shows how to create basic graphics to visualise models, and how to view them interactively in a window.</p></div>
-		</a>
-	</div>
-</div>
-<p class="see-more-btm"><a class="btn btn-link" href="/documentation/tutorials/index.html"> See all tutorials...</a></p>
+	<p class="see-more-btm"><a class="btn btn-link" href="/documentation/tutorials/index.html">See all tutorials...</a></p>
 </section>
 <section class="row doc-links" id="examples">
 	<h2>Examples</h2>
-	<p>Scripts that solve a particular problem, contributed by developers and users of OpenCMISS.</p>
+	<p>Scripts that solve a particular problem, contributed by the community of OpenCMISS.</p>
 	<div class="row-padded">
 		<div class="col-sm-6 media-item">
 			<a href="http://cmiss.bioeng.auckland.ac.nz/development/examples/a/index_thumbs.html">
@@ -81,28 +108,9 @@
 	</div>
 
 </section>
-<section class="doc-links" id="technical">
-	<h2>Technical Documentation</h2>
+<section class="doc-links" id="reference">
+	<h2>Reference</h2>
 	<p>Documentation about the technical aspects of OpenCMISS software and libraries.</p>
-	<h3>User Guides</h3>
-	<div class="row-padded">
-		<div class="media-item col-sm-6">
-			<a href="/documentation/zinc/index.html">
-				<div class="description"><p class="name">Zinc Library Documentation</p>
-					<p>Documentation on using the OpenCMISS-Zinc Library.</p>
-				</div>
-			</a>
-		</div>
-		<div class="media-item col-sm-6">
-			<a href="/documentation/building/index.html">
-				<div class="description"><p class="name">Building From Source</p>
-					<p>Documentation on how to build the OpenCMISS libraries from source.</p>
-				</div>
-			</a>
-		</div>
-	</div>
-
-	<h3>Reference</h3>
 	<div class="row-padded">
 		<div class="media-item col-sm-6">
 			<a href="/documentation/apidoc/zinc/latest/index.html">
@@ -137,8 +145,8 @@
 	</div>
 </section>
 
-<section class="row doc-links" id="developers">
-	<h2>Extending OpenCMISS</h2>
+<section class="row doc-links" id="contributing">
+	<h2>Contributing</h2>
 	<p>Want to contribute to OpenCMISS projects? Visit the <a href="/developers.html">developers documentation page</a>.</p>
 </section>
 
