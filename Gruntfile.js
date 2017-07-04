@@ -57,7 +57,7 @@ module.exports = function (grunt) {
 				tasks: ['sphinx:debug','pelican:debug']
 			},
 			sphinxgen: {
-				files: ['sphinx/**/*.html','sphinx/**/*.py','sphinx/**/*.conf','../**/*.rst','!../_web/**/*.*'],
+				files: ['doc/latest/conf.py','doc/latest/*.rst','doc/latest/**/*.rst'],
 				tasks: ['sphinx:debug']
 			},
 			pelican: {
@@ -350,11 +350,11 @@ module.exports = function (grunt) {
 		exec: {
 			sphinxStaging: {
 				cwd: '.tmp/sphinxenv',
-				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=staging -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
+				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=staging -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
 			},
 			sphinxRelease: {
 				cwd: '.tmp/sphinxenv',
-				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=release -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
+				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=release -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
 			},
 			pelicanStaging: {
 				cwd: 'pelican',
