@@ -350,11 +350,11 @@ module.exports = function (grunt) {
 		exec: {
 			sphinxStaging: {
 				cwd: '.tmp/sphinxenv',
-				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=staging -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
+				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=staging -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
 			},
 			sphinxRelease: {
 				cwd: '.tmp/sphinxenv',
-				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=release -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
+				command: '../../.pythonenv/bin/sphinx-build -A SITEENV=release -c . -b html ../../doc/latest/ build' //The input for Sphinx is from github.com/OpenCMISS/documentation
 			},
 			pelicanStaging: {
 				cwd: 'pelican',
@@ -372,22 +372,22 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					dot: true,
-					cwd: 'sphinx',
+					cwd: 'doc/latest',
 					dest: '.tmp/sphinxenv',
-					src: '**/*.*'
+					src: '*.py'
 				},
 				{ // Copy the cmake module to the temporary sphinx environment
 					expand: true,
 					dot: true,
-					cwd: '../cmake/docs',
+					cwd: 'doc/latest',
 					dest: '.tmp/sphinxenv',
-					src: 'cmake.py'
+					src: '_themes/ocmiss/*.*'
 				},
 				{
 					expand: true,
 					dot: true,
 					cwd: '<%= config.app %>',
-					dest: '.tmp/sphinxenv/templates/ocmiss',
+					dest: '.tmp/sphinxenv/_themes/ocmiss',
 					src: 'partials/**/*.*'
 				}]
 			},
@@ -400,22 +400,21 @@ module.exports = function (grunt) {
 					src: '**/*.*'
 				}]
 			},
-			pelicanOutputToDist: {
-				files: [{
-					expand: true,
-					dot: true,
-					cwd: '.tmp/pelicangen/',
-					dest: '<%= config.dist %>',
-					src: '**/*.*'
-				}]
-			},
-
 			sphinxOutputToDebug: {
 				files: [{
 					expand: true,
 					dot: true,
 					cwd: '.tmp/sphinxenv/build',
 					dest:'.tmp/generated-doc',
+					src: '**/*.*'
+				}]
+			},
+			pelicanOutputToDist: {
+				files: [{
+					expand: true,
+					dot: true,
+					cwd: '.tmp/pelicangen/',
+					dest: '<%= config.dist %>',
 					src: '**/*.*'
 				}]
 			},
