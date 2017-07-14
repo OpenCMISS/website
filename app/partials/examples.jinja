@@ -49,13 +49,6 @@
       </div>
     </div>
   </div>
-  <h2 >Inputs Used</h2>
-  <h3>Comfile</h3>
-  <h4><a href="{{comfile_url}}">{{comfile_name}}</a></h4>
-  <div id="comfile"><pre>{% block source_code %} {% endblock %}</pre></div>
-  <h3>Other Inputs</h3>
-  {% block other_resources %}
-  {% endblock %}
 {% endblock %}
 {% block scripts %}
   {{ super() }}
@@ -67,15 +60,19 @@
   <script src="/scripts/zinc_3js_renderer.js"></script>
   <script src="/scripts/zinc-scene.js"></script>
   <!-- endbuild -->
-  <!-- build:js(.) /scripts/ace.min.js -->
-  <script src="/bower_components/ace-builds/src-min/ace.js"></script>
-  <script src="/bower_components/ace-builds/src-min/theme-chrome.js"></script>
-  <!-- endbuild -->
   <!-- build:js(.tmp) /scripts/examples.js -->
   <script src="/scripts/examples.js"></script>
   <!-- endbuild -->
+  {% if scene_namespace %}
   <script type="text/javascript">
-    setupSourceArea();
+    var sceneRoot = document.getElementsByClassName('main-image')[0];
+    window.modelScene = new ZincScene(sceneRoot,
+    "{{scene_namespace}}",
+    "{{scene_placeholder_image}}")
+    .setDimension(400,400)
+    .setDefaultColour(0xFFFF9C)
+    .startLoading();
   </script>
+  {% endif %}
 
-{% endblock %}
+  {% endblock %}
