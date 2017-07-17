@@ -13,6 +13,7 @@
 {% block sidebar_content %}
   <ul class="list-unstyled">
     <li><a href="/examples/a/per_pixel_lighting/index.html">Per Pixel Lighting</a></li>
+    <li><a href="/examples/a/melanoma/index.html">Melanoma</a></li>
     <li><a href="/examples/a/eye/index.html">Eye Model</a></li>
     <li><a href="/examples/a/animate_jaw/index.html">Animate Jaw</a></li>
   </ul>
@@ -56,18 +57,20 @@
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <script src="/bower_components/threejs/build/three.min.js"></script>
   <script src="/scripts/controls/TransformControls.js"></script>
-  <script src="/scripts/zinc_threejs_control.js"></script>
-  <script src="/scripts/zinc_3js_renderer.js"></script>
-  <script src="/scripts/zinc-scene.js"></script>
+  <script src="/scripts/zinc_threejs_control_v23.js"></script>
+  <script src="/scripts/zinc_3js_renderer_v23js"></script>
+  <script src="/scripts/zinc-scene-new.js"></script>
   <!-- endbuild -->
   <!-- build:js(.tmp) /scripts/examples.js -->
   <script src="/scripts/examples.js"></script>
   <!-- endbuild -->
-  {% if scene_namespace %}
+  {% if scene_prefix %}
   <script type="text/javascript">
     var sceneRoot = document.getElementsByClassName('main-image')[0];
     window.modelScene = new ZincScene(sceneRoot,
-    "{{scene_namespace}}",
+    "{{scene_prefix}}",
+    "{{scene_object_names}}",
+    "{{scene_view_name}}",
     "{{scene_placeholder_image}}")
     .setDimension(400,400)
     .setDefaultColour(0xFFFF9C)

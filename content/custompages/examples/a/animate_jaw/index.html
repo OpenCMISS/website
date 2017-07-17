@@ -1,8 +1,8 @@
 {% extends 'partials/examples.jinja' %}
 {% block title %}
-Animation of the jaw model using the Emoter. - OpenCMISS Examples
+Animation of the jaw model. - OpenCMISS Examples
 {% endblock %}
-{% set model_title = 'Animation of the jaw model using the Emoter.' %}
+{% set model_title = 'Animation of the jaw model.' %}
 {% set model_url = '/assets/examples/a/animate_jaw/examples_a_animate_jaw.tar.gz' %}
 {% block authors %}
 <a href="http://abi.auckland.ac.nz">Auckland Bioengineering Institute</a>
@@ -12,5 +12,7 @@ Animation of the jaw model using the Emoter. - OpenCMISS Examples
 	This example animates opening and closing of the mandible using the Emoter.
 </p>
 {% endblock %}
-{% set scene_namespace = '../../../assets/examples/a/animate_jaw/jaw' %}
-{% set scene_placeholder_image = '../../../assets/examples/a/animate_jaw/animate_jaw.png' %}
+{% set scene_view_name = '../../../assets/examples/a/jaw/jaw_view.json' %}
+{% set scene_placeholder_image = '../../../assets/examples/a/jaw/jaw.png' %}
+{% set scene_prefix = '../../../assets/examples/a/jaw' %}
+{% set scene_object_names = ["jaw"] %}
