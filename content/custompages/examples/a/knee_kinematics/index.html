@@ -1,0 +1,16 @@
+{% extends 'partials/examples.jinja' %}
+{% block title %}
+Knee kinematics model - OpenCMISS Examples
+{% endblock %}
+{% set model_title = 'Knee_kinematics' %}
+{% set model_url = 'http://cmiss.bioeng.auckland.ac.nz/development/examples/a/knee_kinematics/examples_a_knee_kinematics.tar.gz' %}
+{% block authors %}
+<a href="http://abi.auckland.ac.nz/">Auckland Bioengineering Institute</a>
+{% endblock %}
+{% block model_description %}
+<p>This example demonstrates the transformation of bones and visualise anatomical coordinate systems during knee flexion-extension.</p>
+{% endblock %}
+{% set scene_view_name = '../../../assets/examples/a/knee_kinematics/knee_view.json' %}
+{% set scene_placeholder_image = '../../../assets/examples/a/knee_kinematics/knee_kinematics.png' %}
+{% set scene_prefix = '../../../assets/examples/a/knee_kinematics' %}
+{% set scene_object_names = 'knee' %}

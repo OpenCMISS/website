@@ -1,0 +1,19 @@
+{% extends 'partials/examples.jinja' %}
+{% block title %}
+Digitised Model - OpenCMISS Examples
+{% endblock %}
+{% set model_title = 'Digitised model example' %}
+{% set model_url = 'http://cmiss.bioeng.auckland.ac.nz/development/examples/a/snake/examples_a_snake.tar.gz' %}
+{% block authors %}
+<a href="http://abi.auckland.ac.nz/">Auckland Bioengineering Institute</a>
+{% endblock %}
+{% block model_description %}
+<p>This example shows how to use cmgui to fit a curve through data points. The curve is then written out to an exnode 
+	file. This file can be used to generate a sequence of digitisation planes, one for each node.</p>
+{% endblock %}
+{% block main_image %}
+<img src="/assets/examples/a/snake/snake_data.jpg" alt="An image of the digitised model.">
+{% endblock %}
+{% block thumbs %}
+<img class="thumb" src="/assets/examples/a/snake/snake.png" alt="An image of the digitised model.">
+{% endblock %}

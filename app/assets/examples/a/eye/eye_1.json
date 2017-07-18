@@ -1,0 +1,186 @@
+[
+   {
+      "GroupName" : "arteries",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/arteris_2.json"
+   },
+      {
+      "GroupName" : "fitted_orbit",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/bone_2.json"
+   },
+   {
+      "GroupName" : "iris",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/choroid_2.json"
+   },
+   {
+      "GroupName" : "ciliaryBody",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/choroid_3.json"
+   },
+   {
+      "GroupName" : "ciliaryBody",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/choroid_4.json"
+   },
+   {
+      "GroupName" : "choroid2_fitted",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/choroid_back_2.json"
+   },
+   {
+      "GroupName" : "infobl",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/infobl_2.json"
+   },
+   {
+      "GroupName" : "infrec",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/infrec_2.json"
+   },
+   {
+      "GroupName" : "latrect",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/latrect_2.json"
+   },
+   {
+      "GroupName" : "lens",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/lens_2.json"
+   },
+   {
+      "GroupName" : "medrect",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/medrecta_2.json"
+   },
+   {
+      "GroupName" : "opticNerve",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/opticNerve_2.json"
+   },
+   {
+      "GroupName" : "macula",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/retina_2.json"
+   },
+   {
+      "GroupName" : "retina",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/retina_3.json"
+   },
+   {
+      "GroupName" : "retina",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/retina_4.json"
+   },
+   {
+      "GroupName" : "sclera",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/sclera_2.json"
+   },
+   {
+      "GroupName" : "cornea",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/sclera_3.json"
+   },
+   {
+      "GroupName" : "final_skin",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/skins_2.json"
+   },
+   {
+      "GroupName" : "supobl",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/supobl_2.json"
+   },
+    {
+      "GroupName" : "suprec",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/suprec_2.json"
+   },
+   {
+      "GroupName" : "trochlea_moved",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/trochlea_2.json"
+   },
+   {
+      "GroupName" : "veins",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/veins_2.json"
+   },
+   {
+      "GroupName" : "zonules",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/eye/zonules_2.json"
+   }
+]

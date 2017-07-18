@@ -1,0 +1,36 @@
+[
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_tibia_3.json",
+      "GroupName" : "dummy_right_tibia",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_tibia_2.json"
+   },
+   {
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_tibia_4.json"
+   },
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_tibia_6.json",
+      "GroupName" : "dummy_right_tibia",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_tibia_5.json"
+   },
+   {
+      "GlyphGeometriesURL" : "knee/right_tibia_8.json",
+      "GroupName" : "dummy_right_tibia",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_tibia_7.json"
+   }
+]
