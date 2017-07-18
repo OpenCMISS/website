@@ -195,7 +195,8 @@ module.exports = function (grunt) {
 		babel: {
 			options: {
 				sourceMap: true,
-				presets: ['react']
+				presets: ['react'],
+				compact: false
 			},
 			dev: {
 				files: [{
@@ -215,6 +216,7 @@ module.exports = function (grunt) {
 				}]
 			},
 			dist: {
+
 				files: [{
 					'dot': true,
 					"expand": true,
