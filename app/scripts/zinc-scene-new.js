@@ -83,7 +83,7 @@
 
 	ZincScene.prototype.setBackgroundColor = function(color,alpha){
 		if (typeof this.renderer !== "undefined"){
-			this.renderer.threejsRenderer.setClearColor(color,alpha);
+			this.renderer.getThreeJSRenderer().setClearColor(color,alpha);
 		}
 	}
 
@@ -101,7 +101,7 @@
 
 	ZincScene.prototype.getSceneElement = function(){
 		if (typeof this.renderer !== "undefined"){
-			return this.renderer.threejsRenderer.domElement;
+			return this.renderer.getThreeJSRenderer().domElement;
 		} else {
 			return null;
 		}
@@ -181,12 +181,13 @@
 	};
 	
 	ZincScene.prototype._downloadComplete = function() {
+		var _this = this;
 		return function(mygeometry) {
 			if (mygeometry) {
-				var currentTime = zincRenderer.getCurrentTime();
+				var currentTime = _this.renderer.getCurrentTime();
 				mygeometry.setMorphTime(currentTime);
 			}
-			this._showScene();	
+			_this._showScene();	
 		}
 	};
 
