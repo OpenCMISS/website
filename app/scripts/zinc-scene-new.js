@@ -56,7 +56,7 @@
 		}
 	}
 
-	window.ZincScene = function(container,modelNs,objectName,sceneViewURL,placeholderUrl){
+	window.ZincScene = function(container,modelNs,objectName,sceneViewURL,placeholderUrl, lightIntensity){
 		var sceneEl = document.createElement('div');
 		sceneEl.setAttribute('class',"zinc-scene");
 		container.appendChild(sceneEl);
@@ -69,6 +69,7 @@
 		this.modelNs = modelNs;
 		this.objectName = objectName;
 		this.sceneViewURL = sceneViewURL;
+		this.lightIntensity = lightIntensity;
 		var placeholderImg = document.createElement('img');
 		placeholderImg.setAttribute('src',placeholderUrl);
 		placeholderImg.setAttribute('class',this._placeholderClassName);
@@ -95,6 +96,7 @@
 			var index;
    			var metafileName = this.modelNs + "/" + this.objectName + "_1.json";
    			currentScene.loadMetadataURL(metafileName,this._downloadComplete());
+   			currentScene.directionalLight.intensity = this.lightIntensity;
 			renderer.animate();
 		}
 	};
