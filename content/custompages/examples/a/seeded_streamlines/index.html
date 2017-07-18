@@ -1,0 +1,16 @@
+{% extends 'partials/examples.jinja' %}
+{% block title %}
+Seeded streamlines example - OpenCMISS Examples
+{% endblock %}
+{% set model_title = 'Seeded streamlines example' %}
+{% set model_url = 'http://cmiss.bioeng.auckland.ac.nz/development/examples/a/seeded_streamlines/examples_a_seeded_streamlines.tar.gz' %}
+{% block authors %}
+<a href="http://www.abi.auckland.ac.nz/people/profile/h-sorby">Hugh Sorby</a> / <a href="http://abi.auckland.ac.nz">Auckland Bioengineering Institute</a>
+{% endblock %}
+{% block model_description %}
+<p> Generate seeded streamlines from a planar isosurface in a tetrahedral mesh. </p>
+{% endblock %}
+{% set scene_view_name = '../../../assets/examples/a/seeded_streamlines/streamlines_view.json' %}
+{% set scene_placeholder_image = '../../../assets/examples/a/seeded_streamlines/seeded_streamlines.png' %}
+{% set scene_prefix = '../../../assets/examples/a/seeded_streamlines' %}
+{% set scene_object_names = 'streamlines' %}
