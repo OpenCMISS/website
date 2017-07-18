@@ -1,0 +1,36 @@
+[
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_fibula_3.json",
+      "GroupName" : "dummy_right_fibula",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_fibula_2.json"
+   },
+   {
+      "GlyphGeometriesURL" : "knee/right_fibula_5.json",
+      "GroupName" : "dummy_right_fibula",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_fibula_4.json"
+   },
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_fibula_7.json",
+      "GroupName" : "dummy_right_fibula",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_fibula_6.json"
+   },
+   {
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : true,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_fibula_8.json"
+   }
+]

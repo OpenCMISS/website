@@ -1,0 +1,36 @@
+[
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_femur_3.json",
+      "GroupName" : "dummy_right_femur",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_femur_2.json"
+   },
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_femur_5.json",
+      "GroupName" : "dummy_right_femur",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_femur_4.json"
+   },
+   {
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_femur_6.json"
+   },
+   {
+      "GlyphGeometriesURL" : "knee/right_femur_8.json",
+      "GroupName" : "dummy_right_femur",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_femur_7.json"
+   }
+]

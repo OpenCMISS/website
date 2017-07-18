@@ -1,0 +1,36 @@
+[
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_patella_3.json",
+      "GroupName" : "dummy_right_patella",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_patella_2.json"
+   },
+   {
+      "GlyphGeometriesURL" : "knee/right_patella_5.json",
+      "GroupName" : "dummy_right_patella",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_patella_4.json"
+   },
+   {
+      "GlyphGeometriesURL" : "knee/right_patella_7.json",
+      "GroupName" : "dummy_right_patella",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_patella_6.json"
+   },
+   {
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/knee_kinematics/right_patella_8.json"
+   }
+]
