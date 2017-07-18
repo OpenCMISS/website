@@ -25,7 +25,7 @@
       "URL" : "../../../assets/examples/a/knee_kinematics/right_femur_6.json"
    },
    {
-      "GlyphGeometriesURL" : "knee/right_femur_8.json",
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_femur_8.json",
       "GroupName" : "dummy_right_femur",
       "MorphColours" : false,
       "MorphNormals" : false,
@@ -43,7 +43,7 @@
       "URL" : "../../../assets/examples/a/knee_kinematics/right_fibula_2.json"
    },
    {
-      "GlyphGeometriesURL" : "knee/right_fibula_5.json",
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_fibula_5.json",
       "GroupName" : "dummy_right_fibula",
       "MorphColours" : false,
       "MorphNormals" : false,
@@ -77,7 +77,7 @@
       "URL" : "../../../assets/examples/a/knee_kinematics/right_patella_2.json"
    },
    {
-      "GlyphGeometriesURL" : "knee/right_patella_5.json",
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_patella_5.json",
       "GroupName" : "dummy_right_patella",
       "MorphColours" : false,
       "MorphNormals" : false,
@@ -86,7 +86,7 @@
       "URL" : "../../../assets/examples/a/knee_kinematics/right_patella_4.json"
    },
    {
-      "GlyphGeometriesURL" : "knee/right_patella_7.json",
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_patella_7.json",
       "GroupName" : "dummy_right_patella",
       "MorphColours" : false,
       "MorphNormals" : false,
@@ -127,7 +127,7 @@
       "URL" : "../../../assets/examples/a/knee_kinematics/right_tibia_5.json"
    },
    {
-      "GlyphGeometriesURL" : "knee/right_tibia_8.json",
+      "GlyphGeometriesURL" : "../../../assets/examples/a/knee_kinematics/right_tibia_8.json",
       "GroupName" : "dummy_right_tibia",
       "MorphColours" : false,
       "MorphNormals" : false,
