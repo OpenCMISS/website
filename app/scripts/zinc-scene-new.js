@@ -56,7 +56,7 @@
 		}
 	}
 
-	window.ZincScene = function(container,modelNs,objectArray,sceneViewURL,placeholderUrl){
+	window.ZincScene = function(container,modelNs,objectName,sceneViewURL,placeholderUrl){
 		var sceneEl = document.createElement('div');
 		sceneEl.setAttribute('class',"zinc-scene");
 		container.appendChild(sceneEl);
@@ -67,7 +67,7 @@
 		this._placeholderClassName = 'placeholder';
 		this.sceneIsShowing = false;
 		this.modelNs = modelNs;
-		this.objectArray = objectArray;
+		this.objectName = objectName;
 		this.sceneViewURL = sceneViewURL;
 		var placeholderImg = document.createElement('img');
 		placeholderImg.setAttribute('src',placeholderUrl);
@@ -93,10 +93,8 @@
 			var currentScene = renderer.getCurrentScene();
 			currentScene.loadViewURL(this.sceneViewURL);
 			var index;
-			for (index = 0; index < this.objectArray.length; ++index) {
-    			var metafileName = this.modelNs + "/" + this.objectArray[index] + "_1.json";
-    			currentScene.loadMetadataURL(metafileName,this._downloadComplete());
-			}
+   			var metafileName = this.modelNs + "/" + this.objectName + "_1.json";
+   			currentScene.loadMetadataURL(metafileName,this._downloadComplete());
 			renderer.animate();
 		}
 	};
