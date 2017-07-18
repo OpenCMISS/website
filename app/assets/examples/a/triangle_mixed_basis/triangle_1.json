@@ -1,0 +1,19 @@
+[
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/triangle_mixed_basis/triangle_4.json",
+      "GroupName" : "triangle/triangle",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/triangle_mixed_basis/triangle_3.json"
+   },
+   {
+      "GroupName" : "triangle/triangle",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "./../../assets/examples/a/triangle_mixed_basis/triangle_2.json"
+   }
+]
