@@ -12,8 +12,7 @@ Eye model - OpenCMISS Examples
 	Bioengineering Institute.</p>
 {% endblock %}
 {% block main_image %}
-<img src="/assets/examples/a/eye/eye.jpg" alt="An image of the eye model.">
-{% endblock %}
-{% block thumbs %}
-<img class="thumb" src="/assets/examples/a/eye/eye.png" alt="An image of the eye model.">
-{% endblock %}
+{% set scene_view_name = '../../../assets/examples/a/eye/eye_view.json' %}
+{% set scene_placeholder_image = '../../../assets/examples/a/eye/eye.png' %}
+{% set scene_prefix = '../../../assets/examples/a/eye' %}
+{% set scene_object_names = 'eye' %}
