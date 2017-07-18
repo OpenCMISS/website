@@ -1,0 +1,82 @@
+[
+   {
+      "GroupName" : "lv_free",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_2.json"
+   },
+   {
+      "GroupName" : "base_skeletal_outer",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_3.json"
+   },
+   {
+      "GroupName" : "base_skeletal_lower",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_4.json"
+   },
+   {
+      "GroupName" : "base_skeletal_lower",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_5.json"
+   },
+   {
+      "GroupName" : "base_skeletal",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_6.json"
+   },
+   {
+      "GroupName" : "rv_free",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_7.json"
+   },
+   {
+      "GroupName" : "septum",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_8.json"
+   },
+   {
+      "GroupName" : "septum",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_9.json"
+   },
+   {
+      "GroupName" : "wall",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_10.json"
+   },
+   {
+      "GroupName" : "base_skeletal_outer",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/per_pixel_lighting/heart_11.json"
+   }
+]

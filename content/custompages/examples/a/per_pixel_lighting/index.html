@@ -10,14 +10,7 @@ Per pixel lighting example - OpenCMISS Examples
 {% block model_description %}
 <p> CMISS can now use the ARB Vertex program and ARB Fragment program OpenGL extensions to provide per pixel lighting. This shading is a vast improvement over the equivalent lighting with standard Gouraud shading, the specular highlights are very sharp and move smoothly across the surface instead of being starlike and blurry. Code has also been added to support bump texture maps. </p>
 {% endblock %}
-
-{% block main_image %}
-<img src="/assets/examples/a/per_pixel_lighting/per_pixel_lighting.png">
-{% endblock %}
-
-{% block thumbs %}
-<img class="thumb" src="/assets/examples/a/per_pixel_lighting/per_pixel_texture.jpg">
-<img class="thumb" src="/assets/examples/a/per_pixel_lighting/per_pixel_texture_bump.jpg">
-<img class="thumb" src="/assets/examples/a/per_pixel_lighting/thumb_gouraud.jpg">
-<img class="thumb" src="/assets/examples/a/per_pixel_lighting/thumb_per_pixel.jpg">
-{% endblock %}
+{% set scene_view_name = '../../../assets/examples/a/per_pixel_lighting/heart_view.json' %}
+{% set scene_placeholder_image = '../../../assets/examples/a/per_pixel_lighting/per_pixel_lighting.png' %}
+{% set scene_prefix = '../../../assets/examples/a/per_pixel_lighting' %}
+{% set scene_object_names = 'heart' %}
