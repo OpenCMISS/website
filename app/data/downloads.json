@@ -16,7 +16,7 @@
 	"featured": "opencmisslibs",
 	"packages": [{
 			"id": "opencmisslibs",
-			"name": "OpenCMISS Libarires",
+			"name": "OpenCMISS Libraries",
 			"icon": "assets/downloads/opencmiss.png",
 			"description": "OpenCMISS libraries SDK to get you started simulating and visualising models.",
 			"releases": {
