@@ -1,0 +1,42 @@
+{% extends 'partials/common_with_sidebar.jinja' %}
+{% set active_nav = doc %}
+{% block styles %}
+  {{ super() }}
+  <!-- build:css(.tmp) /styles/example.css -->
+  <link rel="stylesheet" href="/styles/example.css">
+  <link rel="stylesheet" href="/styles/zinc-scene.css">
+  <!-- endbuild -->
+{% endblock %}
+{% block sidebar_title %}
+  <h1>Examples</h1>
+{% endblock %}
+{% block sidebar_content %}
+  <ul class="list-unstyled">
+  	<li><a href="/examples/a/animate_jaw/index.html">Animate Jaw</a></li>
+    <li><a href="/examples/a/eye/index.html">Eye Model</a></li>
+    <li><a href="/examples/a/knee_kinematics/index.html">Knee Kinematics</a></li>
+    <li><a href="/examples/a/melanoma/index.html">Melanoma</a></li>
+    <li><a href="/examples/a/per_pixel_lighting/index.html">Per Pixel Lighting</a></li>
+    <li><a href="/examples/a/seeded_streamlines/index.html">Seeded Streamlines</a></li>
+    <li><a href="/examples/a/snake/index.html">Digitised Model</a></li>
+    <li><a href="/examples/a/triangle_mixed_basis/index.html">Triangle Mixed Basis</a></li>
+  </ul>
+{% endblock %}
+
+{% block content %}
+<h1>Examples</h1>
+<section class="gallery" id="gallery">
+	<h2 class="default-style">Gallery</h2>
+	<p class="byline">See models created by others using OpenCMISS tools. Download, customise and produce your own. A good way to learn OpenCMISS is to copy examples that perform a similar task to what is needed. Most of the examples here use the same Mozilla Public License v2.0 as the codebase.</p>
+	<div class="gallery-items">
+		<a href="/examples/a/animate_jaw/index.html"><img src="/images/gallery/thumb_animate_jaw.png"></a>
+		<a href="/examples/a/eye/index.html"><img src="/images/gallery/thumb_eye.png"></a>
+		<a href="/examples/a/seeded_streamlines/index.html"><img src="/images/gallery/thumb_seeded_streamlines.png"></a>
+		<a href="/examples/a/melanoma/index.html"><img src="/images/gallery/thumb_melanoma.png"></a>
+		<a href="/examples/a/per_pixel_lighting/index.html"><img src="/images/gallery/thumb_per_pixel_lighting.png"></a>
+		<a href="/examples/a/knee_kinematics/index.html"><img src="/images/gallery/thumb_knee_kinematics.png"></a>
+		<a href="/examples/a/triangle_mixed_basis/index.html"><img src="/images/gallery/thumb_triangle_mixed_basis.png"></a>
+		<a href="/examples/a/snake/index.html"><img src="/images/gallery/thumb_snake.png"></a>
+	</div>
+</section>
+{% endblock %}
