@@ -1,0 +1,27 @@
+[
+   {
+      "GroupName" : "set",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/seeded_streamlines/streamlines_2.json"
+   },
+   {
+      "GlyphGeometriesURL" : "../../../assets/examples/a/seeded_streamlines/streamlines_4.json",
+      "GroupName" : "seeds",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Glyph",
+      "URL" : "../../../assets/examples/a/seeded_streamlines/streamlines_3.json"
+   },
+   {
+      "GroupName" : "set",
+      "MorphColours" : false,
+      "MorphNormals" : false,
+      "MorphVertices" : false,
+      "Type" : "Surfaces",
+      "URL" : "../../../assets/examples/a/seeded_streamlines/streamlines_5.json"
+   }
+]

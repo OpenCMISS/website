@@ -1,0 +1,19 @@
+{% extends 'partials/examples.jinja' %}
+{% block title %}
+Melanoma model - OpenCMISS Examples
+{% endblock %}
+{% set model_title = 'Melanoma' %}
+{% set model_url = '/assets/examples/a/melanoma/examples_a_melanoma.tar.gz' %}
+{% block authors %}
+<a href="http://abi.auckland.ac.nz/">Auckland Bioengineering Institute</a>
+{% endblock %}
+{% block model_description %}
+<p>This example shows heatmaps displaying the percentage likelihood that 
+	melanoma will spread from the sites on the skin to different sentinel 
+	lymph node fields.</p>
+{% endblock %}
+{% set scene_view_name = '../../../assets/examples/a/melanoma/melanoma_view.json' %}
+{% set scene_placeholder_image = '../../../assets/examples/a/melanoma/melanoma.png' %}
+{% set scene_prefix = '../../../assets/examples/a/melanoma' %}
+{% set scene_object_names = 'melanoma' %}
+{% set light_intensity = 1.8 %}

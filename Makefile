@@ -21,7 +21,8 @@ endif
 apidoc:
 ifeq ($(APIDOC),yes)
 	make -C apidoc
-	cp -r apidoc/build/apidoc extgen
+	mkdir extgen/documentation
+	cp -r apidoc/build/apidoc extgen/documentation
 endif
 
 deps :

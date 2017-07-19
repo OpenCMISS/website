@@ -2,18 +2,15 @@
 	window.pkgmeta = {};
 
 	window.pkgmeta.INSTRUCTIONS_MAP = {
-		"pyzinc":pyzinccomponents.INSTRUCTIONS_MAP,
-		"zinc":zinccomponents.INSTRUCTIONS_MAP
+		"opencmisslibs":opencmisslibscomponents.INSTRUCTIONS_MAP
 	};
 
 	window.pkgmeta.DEV_VERSIONS_MAP = {
-		"pyzinc":devversions.PyZincDevVersionsList,
-		"zinc":devversions.ZincDevVersionsList
+		"opencmisslibs":devversions.OpenCMISSLibrariesDevVersionsList
 	};
 
 	window.pkgmeta.DEV_PKG_NAMES = {
-		"zinc":"OpenCMISS-Zinc",
-		"pyzinc":"pyzinc"
+		"opencmisslibs":"OpenCMISS-Libraries"
 	};
 
 }());

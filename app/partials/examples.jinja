@@ -12,9 +12,14 @@
 {% endblock %}
 {% block sidebar_content %}
   <ul class="list-unstyled">
-    <li><a href="/examples/a/per_pixel_lighting/index.html">Per Pixel Lighting</a></li>
+  	<li><a href="/examples/a/animate_jaw/index.html">Animate Jaw</a></li>
     <li><a href="/examples/a/eye/index.html">Eye Model</a></li>
-    <li><a href="/examples/a/animate_jaw/index.html">Animate Jaw</a></li>
+    <li><a href="/examples/a/knee_kinematics/index.html">Knee Kinematics</a></li>
+    <li><a href="/examples/a/melanoma/index.html">Melanoma</a></li>
+    <li><a href="/examples/a/per_pixel_lighting/index.html">Per Pixel Lighting</a></li>
+    <li><a href="/examples/a/seeded_streamlines/index.html">Seeded Streamlines</a></li>
+    <li><a href="/examples/a/snake/index.html">Digitised Model</a></li>
+    <li><a href="/examples/a/triangle_mixed_basis/index.html">Triangle Mixed Basis</a></li>
   </ul>
 {% endblock %}
 
@@ -49,33 +54,32 @@
       </div>
     </div>
   </div>
-  <h2 >Inputs Used</h2>
-  <h3>Comfile</h3>
-  <h4><a href="{{comfile_url}}">{{comfile_name}}</a></h4>
-  <div id="comfile"><pre>{% block source_code %} {% endblock %}</pre></div>
-  <h3>Other Inputs</h3>
-  {% block other_resources %}
-  {% endblock %}
 {% endblock %}
 {% block scripts %}
   {{ super() }}
-  <!-- build:js({.,.tmp}) /scripts/zinc.bundle.js -->
+  <!-- build:js({.,.tmp}) /scripts/zinc_examples.bundle.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
-  <script src="/bower_components/threejs/build/three.min.js"></script>
-  <script src="/scripts/controls/TransformControls.js"></script>
-  <script src="/scripts/zinc_threejs_control.js"></script>
-  <script src="/scripts/zinc_3js_renderer.js"></script>
-  <script src="/scripts/zinc-scene.js"></script>
-  <!-- endbuild -->
-  <!-- build:js(.) /scripts/ace.min.js -->
-  <script src="/bower_components/ace-builds/src-min/ace.js"></script>
-  <script src="/bower_components/ace-builds/src-min/theme-chrome.js"></script>
+  <script src="/scripts/three-min.js"></script>
+  <script src="/scripts/zinc_threejs_control_v23.js"></script>
+  <script src="/scripts/zinc_3js_renderer_v23.js"></script>
+  <script src="/scripts/zinc-scene-new.js"></script>
   <!-- endbuild -->
   <!-- build:js(.tmp) /scripts/examples.js -->
   <script src="/scripts/examples.js"></script>
   <!-- endbuild -->
+  {% if scene_prefix %}
   <script type="text/javascript">
-    setupSourceArea();
+    var sceneRoot = document.getElementsByClassName('main-image')[0];
+    window.modelScene = new ZincScene(sceneRoot,
+    "{{scene_prefix}}",
+    "{{scene_object_names}}",
+    "{{scene_view_name}}",
+    "{{scene_placeholder_image}}",
+    "{{light_intensity}}")
+    .setDimension(400,400)
+    .setDefaultColour(0xFFFF9C)
+    .startLoading();
   </script>
+  {% endif %}
 
 {% endblock %}
