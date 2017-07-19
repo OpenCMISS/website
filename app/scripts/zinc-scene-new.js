@@ -190,6 +190,7 @@
 				mygeometry.setMorphTime(currentTime);
 			}
 			_this._showScene();	
+			_this.renderer.viewAll();
 		}
 	};
 
