@@ -63,7 +63,7 @@ Building the website
 Editing the website interactively
 --------------------
 
-The build script also supports an interactive editing mode, which allows you to edit the source of the website and see the changes in a browser. To run the build script in this way, do steps 1 to 3 outlined in [Building the website](building-the-website). Then, run 
+The build script also supports an interactive editing mode, which allows you to edit the source of the website and see the changes in a browser. To run the build script in this way, do steps 1 to 3 outlined in Building the website section above. Then, run 
 
    ```
    SITE_URL=[URL] make debug
