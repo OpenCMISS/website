@@ -12,7 +12,6 @@ Dependencies
 * bower (installed through npm)
 * grunt-cli (installed through npm)
 * virtualenv
-* SVN (for building the API documentation)
 * make
 * doxygen
 
