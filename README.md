@@ -21,7 +21,7 @@ The project also depends on packages from npm, bower, pip, as well as projects f
 Building the website
 --------------------
 
-1. Install dependencies from your system's packaging manager. For example, in Debian jessie:
+1. Install dependencies from your system's packaging manager. In Ubuntu 16.04 or Debian jessie, run this:
 
    ```
    sudo apt-get install git python nodejs npm virtualenv make doxygen
@@ -34,6 +34,7 @@ Building the website
    sudo apt-get install nodejs-legacy
    ```
    
+   These commands require superuser privilege. Please ask your local IT administrator for help if necessary.
    In the future a Guix package script may be provided to take care of the installation.
    
 
