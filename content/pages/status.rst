@@ -20,7 +20,7 @@ Here is a list of pages that are complete enough. Please take a look and give me
   Note that this page has some Responsive features implemented. That is, sidebar is hidden and the content shrinks and grows in size depending on screen size.
   **Updated August** `Animate Jaw </examples/a/animate_jaw/index.html>`_ has an interactive 3D model.
 * `Documentation </documentation.html>`_ - **Updated 16 September** some pages have now been converted to the new template.
-* `Getting Started index </getting-started.html>`_ - A page linked from on the front page.
+* `Getting Started index </documentation/getting_started_oclibs.html>`_ - A page linked from on the front page.
 * `Community </community.html>`_
 * `About page </about.html>`_
 * `API documentation </documentation.html#technical>`_ **Added on 16 September** - a copy of latest Zinc and Iron API documentation.

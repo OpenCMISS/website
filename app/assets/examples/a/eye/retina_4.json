@@ -10,7 +10,7 @@
 	"DbgName" : "my_material",
 	"colorDiffuse" : [1, 1, 1],
 	"colorSpecular" : [0, 0, 0],
-	"mapDiffuse" : "./eye_photo_mapped_retina.tiff",
+	"mapDiffuse" : "./eye_photo_mapped_retina.png",
 	"mapDiffuseWrap" : ["repeat", "repeat"],
 	"shading" : "Phong",
 	"specularCoef" : 20,
