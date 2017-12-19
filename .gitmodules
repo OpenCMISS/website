@@ -5,3 +5,7 @@
 [submodule "apidoc/LibZincDoxygen"]
 	path = apidoc/LibZincDoxygen
 	url = https://github.com/OpenCMISS-Dependencies/LibZincDoxygen
+[submodule "apidoc/iron"]
+	path = apidoc/iron
+	url = https://github.com/OpenCMISS/iron
+	branch = develop
