@@ -1,12 +1,15 @@
-Build script for API documentation
-==================================
+Build script for OpenCMISS-Zinc and OpenCMISS-Iron API documentation
+====================================================================
 
-NOTE - The first time the script is run, SVN may warn you about an unknown CA certificate. This is the CA certificate presented by the Physiome Project SVN server, please verify the certificate, and then accept it Permanently to store it.
+Use this script to generate the following documentations:
+* OpenCMISS-Zinc API
+* OpenCMISS-Iron Fortran API
+* OpenCMISS-Iron Internal API
+* OpenCMISS-Iron Python bindings API documentation
+* OpenCMISS-Iron C bindings API documentation
 
-Use this script to generate Zinc C++ header with comments and doxygen page.
-
-Currently it tracks OpenCMISS-Zinc (https://github.com/OpenCMISS/zinc) through a git submodule.
+Currently it tracks OpenCMISS-Zinc develop branch (https://github.com/OpenCMISS/zinc) and OpenCMISS-Iron develop branch (https://github.com/OpenCMISS/iron) through git submodules.
 
 Build It
 --------
-Run `make`.  The built API documentation will be available in the `build` directory.
+Run `make`.  The built API documentation folders will be available in the `build` directory.
