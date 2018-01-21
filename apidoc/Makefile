@@ -1,7 +1,7 @@
 html: clean zincapi ironapi
 
 zincapi:
-# Copies the OpenCMISS-Zinc source code to a working directory then run a custom script, and then run doxygen to generate the relevant API documentation.
+# Copies the OpenCMISS-Zinc source code to a working directory then run a script that transfers Doxygen comments from C to C++ code, and then run doxygen to generate the relevant API documentation.
 	mkdir -p .working/zinc
 	cp -r zinc .working/
 	cp LibZincDoxygen/api_2_api++_doc.py .working/zinc
