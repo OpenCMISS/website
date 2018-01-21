@@ -1,7 +1,7 @@
 Build script for OpenCMISS-Zinc and OpenCMISS-Iron API documentation
 ====================================================================
 
-Use this script to generate the following documentations:
+This script is run in the main Makefile to generate the following documentations:
 * OpenCMISS-Zinc API
 * OpenCMISS-Iron Fortran API
 * OpenCMISS-Iron Internal API
