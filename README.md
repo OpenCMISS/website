@@ -14,6 +14,7 @@ Dependencies
 * virtualenv
 * make
 * doxygen
+* graphviz
 
 The project also depends on packages from npm, bower, pip, as well as projects from GitHub.
 
@@ -23,7 +24,7 @@ Building the website
 1. Install dependencies from your system's packaging manager. In Ubuntu 16.04 or Debian jessie, run this:
 
    ```
-   sudo apt-get install git python nodejs npm virtualenv make doxygen
+   sudo apt-get install git python nodejs npm virtualenv make doxygen graphviz
    sudo npm -g install bower
    sudo npm -g install grunt-cli
    ```

@@ -5,6 +5,7 @@ dist
 bower_components
 *~
 extgen/apidoc
+extgen/documentation
 .pythonenv
 **/*.pyc
 .DS_Store
