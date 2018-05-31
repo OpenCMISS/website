@@ -6,7 +6,7 @@ This OpenCMISS website is a Free Software project, part of OpenCMISS's documenta
 
 This website is the new website for OpenCMISS software. Content is still being migrated from `cmiss.org <http://www.cmiss.org>`_, `physiomeproject.org <http://opencmiss.physiomeproject.org>`_ and other sites.
 
-Contact  `Noel Zeng <mailto:bioeng-webmaster@auckland.ac.nz>`_, a developer and maintainer of this website if you have any suggestions, questions or praise about the website. If you have questions about OpenCMISS software projects, please take a look at the `Community page </community.html>`_.
+Contact  `the OpenCMISS website team <mailto:website@list.opencmiss.org>`_ if you have any suggestions, questions or praise about the website. If you have questions about OpenCMISS software projects, please take a look at the `Community page </community.html>`_.
 
 
 Credit for Artworks
